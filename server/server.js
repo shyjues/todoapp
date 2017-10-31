@@ -40,6 +40,7 @@ app.post('/todos',(req,res)=>{
     });
 
     todo.save().then((doc)=>{
+        console.log(doc);
         res.send(doc);     
     },(err)=>{
         res.send(err);
@@ -51,3 +52,5 @@ app.listen(3000, ()=>{
 
     console.log('app started on port 3000....');
 });
+
+module.exports = {app};
